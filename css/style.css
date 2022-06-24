@@ -702,3 +702,62 @@ p {
 }
 
 /* //footer styles */
+
+/* Responsive styles */
+
+@media (max-width: 991px) {
+	.testimonial-item {
+		width: calc((100% / 2) - 30px);
+	}
+
+	.team-item {
+		width: 50%;
+	}
+
+	.team-item:not(:last-child) {
+		margin-bottom: 75px;
+	}
+}
+@media (max-width: 767px) {
+	.home-text h1 {
+		font-size: 50px;
+		line-height: 65px;
+	}
+
+	.about-text,
+	.about-img,
+	.menu-item {
+		width: 100%;
+	}
+
+	.menu-item:nth-last-of-type(2):after {
+		border-bottom: 2px dashed var(--dark-light);
+	}
+
+	.about-img {
+		margin-top: 40px;
+	}
+
+	.about-text h3 {
+		font-size: 24px;
+	}
+
+	.testimonial-item {
+		width: calc(100% - 30px);
+	}
+
+	.footer-item {
+		width: 100%;
+	}
+
+	.footer-item:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 575px) {
+	.team-item {
+		width: 100%;
+	}
+}
+
+/* //Responsive styles */
