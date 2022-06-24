@@ -15,6 +15,7 @@ fonts
 	--cursive-font: "Dancing Script", cursive;
 	scroll-behavior: smooth;
 }
+/* //variables ending*/
 
 /* global styles */
 * {
@@ -26,6 +27,14 @@ fonts
 ::before,
 ::after {
 	box-sizing: border-box;
+}
+body {
+	font-size: 16px;
+	line-height: 1.5;
+	--webkit-tap-highlight-color: transparent;
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	color: var(--white-light);
 }
 
 img {
@@ -39,12 +48,21 @@ a {
 ul {
 	list-style: none;
 }
-body {
-	font-size: 16px;
-	line-height: 1.5;
-	--webkit-tap-highlight-color: transparent;
-	font-family: "Poppins", sans-serif;
-	font-weight: 300;
+
+h1 {
+	font-weight: 700;
+	color: var(--white);
+}
+h2 {
+	font-weight: 600;
+	color: var(--white);
+}
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+	color: var(--white);
 }
 
 .container {
@@ -64,6 +82,54 @@ body {
 .align-items-center {
 	align-items: center;
 }
+
+.min-vh-100 {
+	min-height: 100vh;
+}
+
+/* //global styles ending */
+
+/* buttons */
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: transparent;
+	border-radius: 30px;
+	text-transform: capitalize;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	font-size: 16px;
+	cursor: pointer;
+	font-family: inherit;
+	color: var(--main-color);
+	line-height: 1.5;
+	user-select: none;
+	border: none;
+}
+
+.btn-default {
+	border: 2px solid var(--main-color);
+}
+
+.btn-default:hover {
+	color: var(--white);
+	background-color: var(--main-color);
+}
+/* //buttons ending */
+
+/* animation keyframes */
+@keyframes zoomInOut {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+/* //animation keyframes ending */
 
 /* header */
 
@@ -193,3 +259,60 @@ body {
 .header .nav ul li a:hover {
 	color: var(--main-color);
 }
+
+/* //header ending */
+
+/* home section styles */
+.home-section {
+	position: relative;
+	overflow: hidden;
+}
+
+.home-section::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: o;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	z-index: -1;
+}
+
+.home-section .home-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("../img/home-bg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	z-index: -2;
+	animation: zoomInOut 20s ease infinite;
+}
+
+.home-section .min-vh-100 {
+	padding: 100px 0;
+}
+
+.home-text {
+	padding: 0 15px;
+	max-width: 700px;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+.home-text h1 {
+	font-family: var(--cursive-font);
+	font-size: 60px;
+	line-height: 75px;
+	margin: 0 0 5px;
+}
+.home-text p {
+	margin: 0 0 30px;
+}
+/* //home styles ending */
