@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+	// Animate On Scroll
+	AOS.init();
+});
+
 // navbar toggler
 const navToggler = document.querySelector(".nav-toggler");
 const Nav = document.querySelector(".nav");
@@ -40,5 +45,8 @@ menuTabs.addEventListener("click", function (e) {
 			.querySelector(".menu-tab-content.active")
 			.classList.remove("active");
 		menuSection.querySelector(target).classList.add("active");
+
+		// Animate On Scroll
+		AOS.init();
 	}
 });

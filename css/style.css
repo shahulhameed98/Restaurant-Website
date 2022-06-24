@@ -95,6 +95,10 @@ p {
 	padding: 80px 0;
 }
 
+section {
+	overflow: hidden;
+}
+
 /* section title */
 .section-title {
 	width: 100%;
